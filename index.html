@@ -3,54 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acessar Login do Pinterest</title>
+  <title>Abrir gov.com.br</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;
-         align-items:center;justify-content:center;height:100vh;margin:0;background:#f7f7f7}
-    .card{background:#fff;padding:24px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.06);width:360px;max-width:90%}
-    h1{font-size:18px;margin:0 0 12px}
-    p{margin:8px 0;color:#444;font-size:14px}
-    .actions{display:flex;gap:8px;margin-top:14px}
-    a.button, button{display:inline-block;padding:10px 12px;border-radius:8px;border:0;
-                     background:#e60023;color:#fff;text-decoration:none;font-weight:600;cursor:pointer}
-    button.secondary{background:#6b6b6b}
-    small{display:block;margin-top:10px;color:#666}
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; display:flex;
+           align-items:center; justify-content:center; height:100vh; margin:0; background:#f6f7fb; }
+    .card { background:white; padding:28px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08);
+           text-align:center; width:320px; }
+    a.button, button { display:inline-block; padding:10px 16px; margin-top:12px; border-radius:8px;
+           border: none; cursor:pointer; text-decoration:none; font-weight:600; }
+    a.button { background:#0b5fff; color:white; }
+    button { background:#e6eefc; color:#0b5fff; }
+    p { margin:8px 0 0 0; color:#444; font-size:14px; }
   </style>
 </head>
 <body>
-  <div class="card" role="main">
-    <h1>Abrir página de login do Pinterest</h1>
-    <p>Use o botão abaixo para abrir a página oficial de login do Pinterest em nova aba (web).</p>
+  <div class="card">
+    <h2>Acessar gov.com.br</h2>
+    <p>Clique no link ou no botão para abrir o site em uma nova aba.</p>
 
-    <div class="actions">
-      <!-- Botão simples que abre a página de login -->
-      <a class="button" href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer">
-        Abrir login do Pinterest
-      </a>
+    <!-- Link simples (abre em nova aba) -->
+    <a class="button" href="https://gov.com.br" target="_blank" rel="noopener noreferrer">Abrir gov.com.br</a>
 
-      <!-- Botão que usa JavaScript para abrir em nova aba (opção alternativa) -->
-      <button id="openBtn" class="secondary" title="Abrir em nova aba via JS">Abrir (JS)</button>
-    </div>
+    <!-- Botão usando JavaScript -->
+    <br/>
+    <button id="openBtn" type="button">Abrir em nova aba (JS)</button>
 
-    <hr style="margin:16px 0;border:none;border-top:1px solid #f0f0f0">
-
-    <!-- Formulário que redireciona para o login (POST não é necessário; é só demonstração) -->
-    <form id="redirectForm" action="https://www.pinterest.com/login/" method="get" target="_blank" style="display:flex;gap:8px">
-      <input type="text" name="q" placeholder="(opcional) pesquisa/utm" style="flex:1;padding:8px;border-radius:8px;border:1px solid #eee">
-      <button type="submit" class="button" style="background:#111">Ir</button>
-    </form>
-
-    <small>
-      Observação: muitos sites (incluindo Pinterest) bloqueiam ser exibidos dentro de iframes por razões de segurança
-      (X-Frame-Options / Content-Security-Policy). Por isso o método recomendado é abrir o link em nova aba ou via
-      redirecionamento, não embutir a página em um <code>&lt;iframe&gt;</code>. 1
-    </small>
+    <p style="font-size:12px; margin-top:10px;">Dica: para usar, salve este arquivo e abra no seu navegador.</p>
   </div>
 
   <script>
-    document.getElementById('openBtn').addEventListener('click', function(){
-      // Abre a página de login em nova aba de forma segura
-      window.open('https://www.pinterest.com/login/', '_blank', 'noopener,noreferrer');
+    document.getElementById('openBtn').addEventListener('click', function () {
+      // Abre em nova aba com proteção (noopener)
+      window.open('https://gov.com.br', '_blank', 'noopener,noreferrer');
     });
   </script>
 </body>
